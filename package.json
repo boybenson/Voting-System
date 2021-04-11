@@ -1,0 +1,29 @@
+{
+  "name": "voting-system",
+  "version": "1.0.0",
+  "description": "This is a voting system built with the mern stack, where candidates log in to their portal and vote for their favorite candidate",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boybenson/voting-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boybenson/voting-system/issues"
+  },
+  "homepage": "https://github.com/boybenson/voting-system#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "multer": "^1.4.2"
+  }
+}
