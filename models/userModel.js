@@ -16,7 +16,27 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+// schema static method for login
+userSchema.statics.login = async function (voterId, password) {
+  const user = await this.findOne({ voterId });
+  if (user) {
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (isMatch) {
+      return user;
+    } else {
+      const err = new Error();
+      err.status = 403;
+      return err;
+    }
+  }
+};
 
 // Pre hook to hash password before saving
 userSchema.pre("save", async function () {
