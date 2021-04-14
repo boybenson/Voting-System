@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -32,7 +31,7 @@ const Header = () => {
                 <Nav.Link>Signin</Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/auth/login">
+              <LinkContainer to="/auth/register">
                 <Nav.Link>Register</Nav.Link>
               </LinkContainer>
 
